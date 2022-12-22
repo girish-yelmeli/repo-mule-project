@@ -36,7 +36,7 @@ output application/json
 payload]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
-		<logger level="INFO" doc:name="Logger" doc:id="79357f08-5768-4f48-93d1-e9a9b6b18484" />
+		<set-payload value="#[payload]" doc:name="Set Payload" doc:id="f6b549e0-de1b-4d0d-be97-9d816e8fd4e3" />
 	</flow>
 	<flow name="getAllAirlineFlights" doc:id="d04b920e-a60e-4b18-a1b0-cc04719ee778" >
 		<scatter-gather doc:name="Scatter-Gather" doc:id="1fb92055-12df-4dd0-97ee-1c31e072d194">
@@ -100,7 +100,7 @@ output application/java
 flatten(payload..payload)]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
-		<logger level="INFO" doc:name="Logger" doc:id="5f3f0069-2501-4d4c-924e-d640c419eeff" />
+		<set-payload value="#[payload]" doc:name="Set Payload" doc:id="1a55f0f2-8a97-4ad5-8a18-8406cf091b8a" />
 	</flow>
 	<sub-flow name="setCode" doc:id="cb0f2066-0425-45a0-a1f3-bc6846c1af95" >
 		<set-variable value="#[message.attributes.queryParams.code]" doc:name="code" doc:id="4538f331-6bd6-48d0-b23a-644db4e13bef" variableName="code"/>
