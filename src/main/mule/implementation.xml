@@ -33,7 +33,9 @@ http://www.mulesoft.org/schema/mule/validation http://www.mulesoft.org/schema/mu
 				<ee:set-payload ><![CDATA[%dw 2.0
 output application/json
 ---
-payload]]></ee:set-payload>
+{
+key: payload
+}]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
 		<set-payload value="#[payload]" doc:name="Set Payload" doc:id="f6b549e0-de1b-4d0d-be97-9d816e8fd4e3" />
