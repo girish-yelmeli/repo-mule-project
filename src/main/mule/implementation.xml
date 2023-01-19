@@ -197,6 +197,7 @@ ns ns0 http://soap.training.mulesoft.com/
 ---
 payload.body.ns0#findFlightResponse.*return map ( return , indexOfReturn ) -> {
 	airlineName: return.airlineName,
+	airline: Mumbai
 	availableSeats: return.emptySeats,
 	departureDate: return.departureDate,
 	destination: return.destination,
